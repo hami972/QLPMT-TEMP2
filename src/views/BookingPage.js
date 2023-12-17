@@ -3,13 +3,13 @@ import TopNav from '../components/TopNav'
 import Footer from '../components/Footer';
 const BookingPage = (props) => {
     return (
-        <div> 
+        <div>
             <TopNav />
-            <section class="row g-0" style={{backgroundColor: '#01D09E'}}>
+            <section class="row g-0 pb-5" style={{ backgroundColor: '#01D09E' }}>
                 <div class="col-1" ></div>
-                <div class="col-sm-6 col-md-5 col-lg-4" >
-                    <div style={{backgroundColor: '#fff', border: "2px solid grey", borderRadius: "5px", boxShadow: "3px 3px #888888", marginTop: "70px" }} align="center">
-                        <form style={{backgroundColor: '#fff'}}>
+                <div class="col-sm-6 col-md-5 col-lg-4 pe-2 ps-2" >
+                    <div style={{ backgroundColor: '#fff', border: "2px solid grey", borderRadius: "5px", boxShadow: "3px 3px #888888", marginTop: "70px" }} align="center">
+                        <form style={{ backgroundColor: '#fff' }}>
                             < h4 align="center" class="mt-5 mb-4" >Đặt lịch hẹn</h4>
                             <div class="mb-3 mt-3 col-10">
                                 <select class="form-select pb-3 pt-3" aria-label="Chọn chi nhánh">
@@ -45,7 +45,7 @@ const BookingPage = (props) => {
                 </div >
                 <div class="col-sm-5 col-md-6 col-lg-7 d-none d-sm-block"><img alt="" src="/images/2.png" style={{ width: "90%" }} align="right" /></div>
             </section >
-            <section class="mt-5" style={{ backgroundColor: "#F0F6FB" }}>
+            <section class="mt-5" style={{ backgroundColor: "#8DE4CF" }}>
                 <div class="container">
                     <div class="row g-0">
                         <div class="col-md-6 pt-5 pb-5">

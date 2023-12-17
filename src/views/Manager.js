@@ -23,10 +23,52 @@ const Manager = (props) => {
             <TopNav />
             <nav className="container-fluid ">
                 <div className="row flex-nowrap ">
-                    <div className="col-auto bg-primary" id="slide-menu">
-                        <div className="d-flex flex-column sticky-top backgroundMenu" >
-                            <ul className="nav nav-pills d-flex flex-column " id="menu">
-                                <li className="nav-item mb-2 ">
+                    <div className="col py-3">
+                        <Route >
+                            <Switch />
+
+                            <Route path="/manager/quanlylichhen">
+                                <QuanLyLichHen />
+                            </Route>
+                            <Route path="/manager/quanlybenhnhan">
+                                <QuanLyLichHen />
+                            </Route>
+                            <Route path="/manager/quanlynhanvien">
+                                <QuanLyNhanVien />
+                            </Route>
+                            <Route path="/manager/baocao">
+                                <BaoCao />
+                            </Route>
+                            <Route path="/manager/quanlykho">
+                                <QuanLyKho />
+                            </Route>
+                            <Route path="/manager/themtoathuoc">
+                                <QuanLyLichHen />
+                            </Route>
+                            <Route path="/manager/quanlyhoadon">
+                                <QuanLyLichHen />
+                            </Route>
+                            <Route path="/manager/quanlydichvu">
+                                <QuanLyDichVu />
+                            </Route>
+                            <Route path="/manager/quanlychinhanh">
+                                <QuanLyChiNhanh />
+                            </Route>
+                            <Route path="/manager/quanlymagiamgia">
+                                <QuanLyMaGiamGia />
+                            </Route>
+                            <Route path="/manager/quanlydanhgia" >
+                                <QuanLyDanhGia />
+                            </Route>
+
+                            {pathname === "/manager" ? <Redirect to="/manager/quanlylichhen" /> : null}
+                            <Switch />
+                        </Route>
+                    </div>
+                    <div className="col-auto backgroundMenu" id="slide-menu">
+                        <div className="d-flex flex-column sticky-top" >
+                            <ul className="nav nav-pills d-flex flex-column" id="menu">
+                                <li className="nav-item mb-2 mt-2 ">
                                     <NavLink to="/manager/quanlylichhen" className="nav-link">
                                         <img src="/images/qlylichhen_48px.png" alt="" /> <span className="ms-1 d-none d-sm-inline">Quản lý lịch hẹn</span>
                                     </NavLink>
@@ -85,48 +127,6 @@ const Manager = (props) => {
 
                             </ul>
                         </div>
-                    </div>
-                    <div className="col py-3">
-                        <Route >
-                            <Switch />
-
-                            <Route path="/manager/quanlylichhen">
-                                <QuanLyLichHen />
-                            </Route>
-                            <Route path="/manager/quanlybenhnhan">
-                                <QuanLyLichHen />
-                            </Route>
-                            <Route path="/manager/quanlynhanvien">
-                                <QuanLyNhanVien />
-                            </Route>
-                            <Route path="/manager/baocao">
-                                <BaoCao />
-                            </Route>
-                            <Route path="/manager/quanlykho">
-                                <QuanLyKho />
-                            </Route>
-                            <Route path="/manager/themtoathuoc">
-                                <QuanLyLichHen />
-                            </Route>
-                            <Route path="/manager/quanlyhoadon">
-                                <QuanLyLichHen />
-                            </Route>
-                            <Route path="/manager/quanlydichvu">
-                                <QuanLyDichVu />
-                            </Route>
-                            <Route path="/manager/quanlychinhanh">
-                                <QuanLyChiNhanh />
-                            </Route>
-                            <Route path="/manager/quanlymagiamgia">
-                                <QuanLyMaGiamGia />
-                            </Route>
-                            <Route path="/manager/quanlydanhgia" >
-                                <QuanLyDanhGia />
-                            </Route>
-
-                            {pathname === "/manager" ? <Redirect to="/manager/quanlylichhen" /> : null}
-                            <Switch />
-                        </Route>
                     </div>
                 </div>
             </nav>

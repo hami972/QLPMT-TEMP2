@@ -7,11 +7,11 @@ const SignInPage = (props) => {
     return (
         <div>
             <TopNav />
-            <section className="row g-0 backgroundMenu">
+            <section className="row g-0 backgroundMenu pb-5">
                 <div class="col-1"></div>
-                <div class="col-sm-6 col-md-5 col-lg-4">
-                    <div style={{backgroundColor: '#fff', border: "2px solid grey", borderRadius: "5px", boxShadow: "3px 3px #888888", marginTop: "70px" }} align="center">
-                        <form style={{backgroundColor: '#fff'}}>
+                <div class="col-sm-6 col-md-5 col-lg-4 pe-2 ps-2">
+                    <div style={{ backgroundColor: '#fff', border: "2px solid grey", borderRadius: "5px", boxShadow: "3px 3px #888888", marginTop: "70px" }} align="center">
+                        <form style={{ backgroundColor: '#fff' }}>
                             <h4 align="center" class="mt-5 mb-4">Đăng nhập</h4>
                             <div class="mb-3 mt-3 col-10">
                                 <input type="text" class="form-control pb-3 pt-3" id="username" name="username" placeholder="Tên đăng nhập" onInvalid={e => e.target.setCustomValidity('Mời bạn nhập tên đăng nhập')} onInput={e => e.target.setCustomValidity('')} required />

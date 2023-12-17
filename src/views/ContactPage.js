@@ -5,7 +5,7 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import TopNav from '../components/TopNav'
 import Footer from '../components/Footer';
-import {FaArrowRight, FaArrowLeft} from "react-icons/fa"
+import { FaArrowRight, FaArrowLeft } from "react-icons/fa"
 import { useState } from 'react';
 import image1 from '../assets/image1.png'
 import image2 from '../assets/image2.png'
@@ -71,7 +71,7 @@ const ContactPage = (props) => {
         }
     ]
     //custom setting for slider
-    var settings = {
+    var settingsJudement = {
         dots: true,
         infinite: true,
         swipeToSlide: true,
@@ -101,32 +101,32 @@ const ContactPage = (props) => {
         ]
     };
 
-    const NextArrow = ({onClick}) => {
+    const NextArrow = ({ onClick }) => {
         return (
             <div className='arrow next' onClick={onClick}>
-                <FaArrowRight/>
+                <FaArrowRight />
             </div>
         )
     }
-    const PrevArrow = ({onClick}) => {
+    const PrevArrow = ({ onClick }) => {
         return (
             <div className='arrow prev' onClick={onClick}>
-                <FaArrowLeft/>
+                <FaArrowLeft />
             </div>
         )
     }
-    const images = [image1,image2,image3,image1];
+    const images = [image1, image2, image3, image1];
     const [imageIndex, setImageIndex] = useState(0)
     //custom setting for slider
     var settings = {
         infinite: true,
         lazyLoad: true,
         slidesToShow: 3,
-        speed:700,
+        speed: 700,
         centerMode: true,
         centerPadding: 0,
-        nextArrow: <NextArrow/>,
-        prevArrow: <PrevArrow/>,
+        nextArrow: <NextArrow />,
+        prevArrow: <PrevArrow />,
         beforeChange: (current, next) => setImageIndex(next)
     };
     return (
@@ -142,25 +142,25 @@ const ContactPage = (props) => {
                     <div class="col-md-3"></div>
                 </div>
             </section>
-            <section className="container mb-5">
-            <Slider {...settings}>
-                        {images.map((item, index) => {
-                            return (
-                                <div className="container mb-2" >
-                                    <div className={index=== imageIndex ? "slide activeSlide" : "slide"}>
-                                        <img src={item} alt={item}/>
-                                    </div>
+            <section className="container mb-5 mt-3">
+                <Slider {...settings}>
+                    {images.map((item, index) => {
+                        return (
+                            <div className="container mb-2" >
+                                <div className={index === imageIndex ? "slide activeSlide" : "slide"}>
+                                    <img src={item} alt={item} />
                                 </div>
-                            )
-                        })}
+                            </div>
+                        )
+                    })}
 
-                    </Slider>
+                </Slider>
             </section >
             <section className='container'>
                 <h3 align="center">Phản hồi của khách hàng</h3>
                 <p className='text-center'>Cảm ơn bạn đã tin tưởng chúng tôi</p>
                 <div class="container-fluid mt-4" align="center">
-                    <Slider {...settings}>
+                    <Slider {...settingsJudement}>
                         {reviewList.map((item, index) => {
                             return (
                                 <div className="container mb-2" >
