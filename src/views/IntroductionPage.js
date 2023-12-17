@@ -3,23 +3,29 @@ import './style.css'
 import { NavLink, useHistory } from "react-router-dom";
 import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
-import Slider from "react-slick";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import { AutoScroll } from "@splidejs/splide-extension-auto-scroll";
+import "@splidejs/splide/dist/css/splide.min.css";
 import TopNav from '../components/TopNav'
 import Footer from '../components/Footer';
+
+import Slider from 'react-slick';
+
 const IntroductionPage = (props) => {
     //move to SignUp page
     const history = useHistory();
     const moveToBookingPage = () => {
         history.push("/booking")
     }
-
+    
+    
     //fake review list
     const reviewList = [
         {
             fullname: "Trần Thị C",
             image: "/images/ava.png",
             brach: "Chi nhánh quận 1",
-            review: "Đặt lịch rất dễ dàng, luôn tạo điều kiện tốt cho khách hàng nhất có thể"
+            review: "Đặt lịch rất dễ dàng, luôn tạo điều kiện tốt cho khách hàng"
         },
         {
             fullname: "Trần Văn Yến",
@@ -72,68 +78,41 @@ const IntroductionPage = (props) => {
             review: "Đặt lịch rất dễ dàng, luôn tạo điều kiện tốt cho khách hàng"
         }
     ]
-    //custom setting for slider
-    var settings = {
-        dots: true,
-        infinite: true,
-        swipeToSlide: true,
-        speed: 500,
-
-        slidesToShow: 3,//number show each slide
-        slidesToScroll: 3,//number item next 
-        responsive: [
-            {
-                breakpoint: 800,
-                settings: {
-                    slidesToShow: 2,
-                    slidesToScroll: 1,
-                    arrows: false,
-                }
-            },
-            {
-                breakpoint: 480,
-                settings: {
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    arrows: false,
-                    dots: false
-                }
-            }
-
-        ]
-    };
-
+    
 
     return (
-        <div>
+        <div >
+           
             <TopNav />
-            <section className="row g-0">
-                <div className="col-1"></div>
+            <section className="row g-0" style={{backgroundColor: '#01D09E'}}>
+                
+                <div className="col-md-6 d-none d-md-block"><img alt="" src="/images/2.png" style={{ width: "90%" }} align="right" /></div>
+                
                 <div className="col-md-5 mt-5 p-3">
-                    <p className="mt-5" style={{ fontSize: "25px", color: "#0096FF" }}>Chào mừng đến với chúng tôi</p>
-                    <p><h3>Với kinh nghiệm hơn 7 năm, chúng tôi sẽ đem đến cho bạn nhưng trải nghiệm tốt nhất</h3></p>
+                    <p> </p>
+                    <p> <h1> Phòng khám Vui Vẻ của chúng tôi được thành lập từ 2015 </h1> </p>
+                    <p> <h3>Chúng tôi hứa hẹn sẽ đem đến trải nghiệm tốt nhất</h3> </p>
+                    <p><h3>Đặt lịch ngay với chúng tôi</h3></p>
                     <div className="col-12">
-                        <button type="submit" className="btn pb-2 pt-2 px-5 pe-5 mt-4" style={{ backgroundColor: "#0096FF", color: "#FFFFFF" }} onClick={() => moveToBookingPage()}>Đặt lịch ngay</button>
+                        <button type="submit" className="btn pb-2 pt-2 px-5 pe-5 mt-4" style={{ backgroundColor: "#fff", color: "#222" }} onClick={() => moveToBookingPage()}>Đặt lịch ngay</button>
                     </div>
                 </div>
-                <div className="col-md-6 d-none d-md-block"><img alt="" src="/images/kham5.png" style={{ width: "90%" }} align="right" /></div>
-
             </section >
-            <section className="mt-5 container-fluid" style={{ backgroundImage: "url(/images/kham6.png)", backgroundRepeat: "no-repeat", backgroundPosition: "center left 35%" }}>
+            <section className="mt-5 container-fluid" style={{ backgroundImage: "url(/images/clinic.png)", backgroundRepeat: "no-repeat", backgroundPosition: "center left 35%", backgroundSize: "contain" }}>
                 <div className="row">
                     <div className="col-6"></div>
                     <div className="col-md-5">
                         <p><h5>CÁC CHUYÊN GIA LUÔN KHUYẾN CÁO</h5></p>
                         <p>
-                            <span style={{ fontSize: "20px", color: "#0096FF" }}>Đừng bao giờ quên vệ sinh răng miệng</span><br />
+                            <span style={{ fontSize: "20px", color: "#01D09E" }}>Đừng bao giờ quên vệ sinh răng miệng</span><br />
                             <span style={{ color: "black" }}>Hãy luôn vệ sinh sạch sẽ răng miệng của chính bản thân bằng cách thường xuyên súc miệng và đánh răng ít nhất 2 lần/ngày.</span>
                         </p>
                         <p className="mt-4">
-                            <span style={{ fontSize: "20px", color: "#0096FF" }}>Đừng quá mạnh tay khi chải răng</span><br />
+                            <span style={{ fontSize: "20px", color: "#01D09E" }}>Đừng quá mạnh tay khi chải răng</span><br />
                             <span style={{ color: "black" }}>Không nên đánh răng quá mạnh, nên đánh răng nhẹ nhàng theo vòng tròn bao gồm cả mặt trong, mặt ngoài của răng và lưỡi.</span>
                         </p>
                         <p className="mt-4">
-                            <span style={{ fontSize: "20px", color: "#0096FF" }}>Thăm khám răng miệng thường xuyên</span><br />
+                            <span style={{ fontSize: "20px", color: "#01D09E" }}>Thăm khám răng miệng thường xuyên</span><br />
                             <span style={{ color: "black" }}>Nên khám răng theo khuyến nghị của nha sĩ, khoảng 6 tháng/lần. Khi có các dấu hiệu sau đề nghị đi khám ngay: Đau răng, sưng hoặc xuất huyết lưỡi, sưng lợi và vùng xương hàm, có vết loét niêm mạc miệng.</span>
                         </p>
                     </div>
@@ -191,64 +170,141 @@ const IntroductionPage = (props) => {
             </section>
             <section class="container mt-5 mb-5">
                 <h4 align="center">Đội ngũ các chuyên gia nha sĩ</h4>
-                <div class="row">
-                    <div class="col-sm-6 col-md-3 p-4">
-                        <img alt="" src="/images/doctor1.jpg" style={{ width: "100%" }} />
-                        <p class="mt-3">
-                            Nguyễn Văn A<br />
-                            Chuyên khoa:<br />
-                            Chi nhánh:  Lâm Văn Bền, Quận 7, HCM
-                        </p>
-
-                    </div>
-                    <div class="col-sm-6 col-md-3 p-4">
-                        <img alt="" src="/images/doctor1.jpg" style={{ width: "100%" }} />
-                        <p class="mt-3">
-                            Nguyễn Văn A<br />
-                            Chuyên khoa:<br />
-                            Chi nhánh:  Lâm Văn Bền, Quận 7, HCM
-                        </p>
-                    </div>
-                    <div class="col-sm-6 col-md-3 p-4">
-                        <img alt="" src="/images/doctor1.jpg" style={{ width: "100%" }} />
-                        <p class="mt-3">
-                            Nguyễn Văn A<br />
-                            Chuyên khoa:<br />
-                            Chi nhánh:  Lâm Văn Bền, Quận 7, HCM
-                        </p>
-                    </div>
-                    <div class="col-sm-6 col-md-3 p-4">
-                        <img alt="" src="/images/doctor1.jpg" style={{ width: "100%" }} />
-                        <p class="mt-3">
-                            Nguyễn Văn A<br />
-                            Chuyên khoa:<br />
-                            Chi nhánh:  Lâm Văn Bền, Quận 7, HCM
-                        </p>
-                    </div>
-                </div>
+                <Slider
+                    navigation={true}
+                    effect={"coverflow"}
+                    centeredSlides={true}
+                    slidesPerView={window.innerWidth < 768 ? 1 : "auto"}
+                    loop={true}
+                    coverflowEffect={{
+                    rotate: 50,
+                    stretch: 0,
+                    depth: 100,
+                    modifier: 1,
+                
+                    slideShadows: true
+                    }}
+                    pagination={{
+                    clickable: true
+                    }}
+                    className="mySwiper"
+                >
+                    <SplideSlide>
+                        <table className='table table-striped'>
+                            <tr>
+                                <td style={{width: "20%"}}>
+                                </td>
+                                <td style={{width: "20%"}}>
+                                    <img style={{width: "100%"}} src="/images/doctor2.jpg" /> 
+                                </td>
+                                <td style={{width: "40%", align: 'l'}}>
+                                    <p> Họ và tên: Dr. Nguyễn Văn A <br/>
+                                        Chuyên ngành: Nha khoa, orthodontics, implantology, etc.<br/>
+                                        Học vị: Tiến sĩ nha khoa.<br/>
+                                        Kinh nghiệm: 7 năm hoạt động trong lĩnh vực nha khoa.<br/>
+                                        Địa chỉ phòng khám: Quận 8, Thành phố HCM<br/>
+                                        Số điện thoại: 000000000000.<br/>
+                                        Email: nguyenvana@gmail.com </p>
+                                </td>
+                            </tr>
+                        </table>
+                    </SplideSlide>
+                    <SplideSlide>
+                    <table className='table table-striped'>
+                            <tr>
+                                <td style={{width: "20%"}}>
+                                </td>
+                                <td style={{width: "20%"}}>
+                                    <img style={{width: "100%"}} src="/images/doctor1.jpg" /> 
+                                </td>
+                                <td style={{width: "40%", align: 'l'}}>
+                                    <p> Họ và tên: Dr. Nguyễn Văn A <br/>
+                                        Chuyên ngành: Nha khoa, orthodontics, implantology, etc.<br/>
+                                        Học vị: Tiến sĩ nha khoa.<br/>
+                                        Kinh nghiệm: 7 năm hoạt động trong lĩnh vực nha khoa.<br/>
+                                        Địa chỉ phòng khám: Quận 8, Thành phố HCM<br/>
+                                        Số điện thoại: 000000000000.<br/>
+                                        Email: nguyenvana@gmail.com </p>
+                                </td>
+                            </tr>
+                        </table>
+                    </SplideSlide>
+                    <SplideSlide>
+                    <table className='table table-striped'>
+                            <tr>
+                                <td style={{width: "20%"}}>
+                                </td>
+                                <td style={{width: "20%"}}>
+                                    <img style={{width: "100%"}} src="/images/doctor1.jpg" /> 
+                                </td>
+                                <td style={{width: "40%", align: 'l'}}>
+                                    <p> Họ và tên: Dr. Nguyễn Văn A <br/>
+                                        Chuyên ngành: Nha khoa, orthodontics, implantology, etc.<br/>
+                                        Học vị: Tiến sĩ nha khoa.<br/>
+                                        Kinh nghiệm: 7 năm hoạt động trong lĩnh vực nha khoa.<br/>
+                                        Địa chỉ phòng khám: Quận 8, Thành phố HCM<br/>
+                                        Số điện thoại: 000000000000.<br/>
+                                        Email: nguyenvana@gmail.com </p>
+                                </td>
+                            </tr>
+                        </table>
+                    </SplideSlide>
+                    <SplideSlide>
+                    <table className='table table-striped'>
+                            <tr>
+                                <td style={{width: "20%"}}>
+                                </td>
+                                <td style={{width: "20%"}}>
+                                    <img style={{width: "100%"}} src="/images/doctor4.jpg" /> 
+                                </td>
+                                <td style={{width: "40%", align: 'l'}}>
+                                    <p> Họ và tên: Dr. Nguyễn Văn A <br/>
+                                        Chuyên ngành: Nha khoa, orthodontics, implantology, etc.<br/>
+                                        Học vị: Tiến sĩ nha khoa.<br/>
+                                        Kinh nghiệm: 7 năm hoạt động trong lĩnh vực nha khoa.<br/>
+                                        Địa chỉ phòng khám: Quận 8, Thành phố HCM<br/>
+                                        Số điện thoại: 000000000000.<br/>
+                                        Email: nguyenvana@gmail.com </p>
+                                </td>
+                            </tr>
+                        </table>
+                    </SplideSlide>
+                    
+                </Slider>
                 <h5 className="mt-2" align="center"><NavLink to="/doctors" className="text-decoration-none customLink" style={{ color: "#000" }}>Xem thêm &rarr;</NavLink></h5>
             </section>
             <section className='container'>
                 <h3 align="center">Phản hồi của khách hàng</h3>
                 <p className='text-center'>Cảm ơn bạn đã tin tưởng chúng tôi</p>
                 <div class="container-fluid mt-4" align="center">
-                    <Slider {...settings}>
-                        {reviewList.map((item, index) => {
-                            return (
-                                <div className="container mb-2" >
-                                    <div className="p-4">
-                                        <div className="custom-slider-item pt-5 pb-5 pe-3 px-3 mb-4" >
-                                            <p className="truncation-text">{item.review}</p>
-                                        </div>
-                                        <img alt="" className="img-thumbnail" src="/images/ava.png" style={{ borderRadius: "50%", width: "40%" }} />
-                                        <h5 className='mt-2'>{item.fullname}</h5>
-                                        <p>{item.brach}</p>
-                                    </div>
-                                </div>
-                            )
-                        })}
-
-                    </Slider>
+                <Splide
+                    options={{
+                        type: "loop",
+                        gap: "10px",
+                        drag: "free",
+                        arrows: false,
+                        pagination: false,
+                        perPage: 3,
+                        autoScroll: {
+                        pauseOnHover: false,
+                        pauseOnFocus: false,
+                        rewind: false,
+                        speed: 1
+                        }
+                    }}
+                    extensions={{ AutoScroll }}
+                    >
+                    {reviewList.map((row, idx) => {
+                        return (
+                    <SplideSlide>
+                        <div className='col-sm-12 reviewSlide'>
+                            <h1>{row.fullname}</h1>
+                            <p>{row.review}</p>
+                        </div>
+                    </SplideSlide>
+                        );
+                    })}
+                </Splide>
                 </div>
 
             </section >

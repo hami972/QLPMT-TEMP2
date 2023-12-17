@@ -21,12 +21,12 @@ const Manager = (props) => {
     return (
         <div >
             <TopNav />
-            <nav className="container-fluid">
-                <div className="row flex-nowrap">
+            <nav className="container-fluid ">
+                <div className="row flex-nowrap ">
                     <div className="col-auto bg-primary" id="slide-menu">
-                        <div className="d-flex flex-column sticky-top">
-                            <ul className="nav nav-pills d-flex flex-column" id="menu">
-                                <li className="nav-item mb-2">
+                        <div className="d-flex flex-column sticky-top backgroundMenu" >
+                            <ul className="nav nav-pills d-flex flex-column " id="menu">
+                                <li className="nav-item mb-2 ">
                                     <NavLink to="/manager/quanlylichhen" className="nav-link">
                                         <img src="/images/qlylichhen_48px.png" alt="" /> <span className="ms-1 d-none d-sm-inline">Quản lý lịch hẹn</span>
                                     </NavLink>

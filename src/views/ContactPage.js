@@ -5,6 +5,11 @@ import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import TopNav from '../components/TopNav'
 import Footer from '../components/Footer';
+import {FaArrowRight, FaArrowLeft} from "react-icons/fa"
+import { useState } from 'react';
+import image1 from '../assets/image1.png'
+import image2 from '../assets/image2.png'
+import image3 from '../assets/image3.png'
 const ContactPage = (props) => {
     //fake review list
     const reviewList = [
@@ -96,11 +101,38 @@ const ContactPage = (props) => {
         ]
     };
 
-
+    const NextArrow = ({onClick}) => {
+        return (
+            <div className='arrow next' onClick={onClick}>
+                <FaArrowRight/>
+            </div>
+        )
+    }
+    const PrevArrow = ({onClick}) => {
+        return (
+            <div className='arrow prev' onClick={onClick}>
+                <FaArrowLeft/>
+            </div>
+        )
+    }
+    const images = [image1,image2,image3,image1];
+    const [imageIndex, setImageIndex] = useState(0)
+    //custom setting for slider
+    var settings = {
+        infinite: true,
+        lazyLoad: true,
+        slidesToShow: 3,
+        speed:700,
+        centerMode: true,
+        centerPadding: 0,
+        nextArrow: <NextArrow/>,
+        prevArrow: <PrevArrow/>,
+        beforeChange: (current, next) => setImageIndex(next)
+    };
     return (
         <div>
             <TopNav />
-            <header className="pt-4 pb-4" style={{ backgroundColor: "#0096FF", color: "#FFF" }}><h3 align="center">Liên lạc</h3></header>
+            <header className="pt-4 pb-4" style={{ backgroundColor: "#01D09E", color: "#FFF" }}><h3 align="center">Liên lạc</h3></header>
             <section className="container mt-5">
                 <div className="row">
                     <div class="col-md-3"></div>
@@ -111,72 +143,18 @@ const ContactPage = (props) => {
                 </div>
             </section>
             <section className="container mb-5">
-                <div className="mt-4">
-                    <h3 align="center">Chi nhánh 1</h3>
-                    <div className="row">
-                        <div className="col-md-4 text-center mt-2">
-                            <i className="fa-solid fa-location-dot" style={{ color: "#0096FF", fontSize: "25px" }}></i>
-                            <p><h4>Địa chỉ</h4></p>
-                            ABC, Quận 7, Hồ Chi Minh
-                        </div>
-                        <div class="col-md-4 text-center mt-2">
-                            <i className="fa-solid fa-phone-volume" style={{ color: "#0096FF", fontSize: "25px" }}></i>
-                            <p><h4>Liên lạc</h4></p>
-                            Email : abc@gmail.com<br />
-                            Phone : +6435346436
-                        </div>
-                        <div class="col-md-4 text-center mt-2">
-                            <i className="fa-regular fa-clock" style={{ color: "#0096FF", fontSize: "25px" }}></i>
-                            <p><h4>Giờ mở cửa</h4></p>
-                            Thứ 2 - Thứ 7: 09:00 – 20:00<br />
-                            Chủ nhật: 10:30 – 22:00
-                        </div>
-                    </div>
-                </div>
-                <div className="mt-4">
-                    <h3 align="center">Chi nhánh 2</h3>
-                    <div className="row">
-                        <div className="col-md-4 text-center mt-2">
-                            <i className="fa-solid fa-location-dot" style={{ color: "#0096FF", fontSize: "25px" }}></i>
-                            <p><h4>Địa chỉ</h4></p>
-                            ABC, Quận 7, Hồ Chi Minh
-                        </div>
-                        <div class="col-md-4 text-center mt-2">
-                            <i className="fa-solid fa-phone-volume" style={{ color: "#0096FF", fontSize: "25px" }}></i>
-                            <p><h4>Liên lạc</h4></p>
-                            Email : abc@gmail.com<br />
-                            Phone : +6435346436
-                        </div>
-                        <div class="col-md-4 text-center mt-2">
-                            <i className="fa-regular fa-clock" style={{ color: "#0096FF", fontSize: "25px" }}></i>
-                            <p><h4>Giờ mở cửa</h4></p>
-                            Thứ 2 - Thứ 7: 09:00 – 20:00<br />
-                            Chủ nhật: 10:30 – 22:00
-                        </div>
-                    </div>
-                </div>
-                <div className="mt-4">
-                    <h3 align="center">Chi nhánh 3</h3>
-                    <div className="row">
-                        <div className="col-md-4 text-center mt-2">
-                            <i className="fa-solid fa-location-dot" style={{ color: "#0096FF", fontSize: "25px" }}></i>
-                            <p><h4>Địa chỉ</h4></p>
-                            ABC, Quận 7, Hồ Chi Minh
-                        </div>
-                        <div class="col-md-4 text-center mt-2">
-                            <i className="fa-solid fa-phone-volume" style={{ color: "#0096FF", fontSize: "25px" }}></i>
-                            <p><h4>Liên lạc</h4></p>
-                            Email : abc@gmail.com<br />
-                            Phone : +6435346436
-                        </div>
-                        <div class="col-md-4 text-center mt-2">
-                            <i className="fa-regular fa-clock" style={{ color: "#0096FF", fontSize: "25px" }}></i>
-                            <p><h4>Giờ mở cửa</h4></p>
-                            Thứ 2 - Thứ 7: 09:00 – 20:00<br />
-                            Chủ nhật: 10:30 – 22:00
-                        </div>
-                    </div>
-                </div>
+            <Slider {...settings}>
+                        {images.map((item, index) => {
+                            return (
+                                <div className="container mb-2" >
+                                    <div className={index=== imageIndex ? "slide activeSlide" : "slide"}>
+                                        <img src={item} alt={item}/>
+                                    </div>
+                                </div>
+                            )
+                        })}
+
+                    </Slider>
             </section >
             <section className='container'>
                 <h3 align="center">Phản hồi của khách hàng</h3>

@@ -80,7 +80,7 @@ const DoctorsPage = (props) => {
     return (
         <div>
             <TopNav />
-            <header className="pt-4 pb-4" style={{ backgroundColor: "#0096FF", color: "#FFF" }}><h3 align="center">Bác sĩ của chúng tôi</h3></header>
+            <header className="pt-4 pb-4" style={{ backgroundColor: "#01D09E", color: "#FFF" }}><h3 align="center">Bác sĩ của chúng tôi</h3></header>
             <section className="container mt-5 mb-5">
                 <div className="row">
                     <div className="col-md-5 text-center">

@@ -7,11 +7,11 @@ const SignInPage = (props) => {
     return (
         <div>
             <TopNav />
-            <section className="row g-0">
+            <section className="row g-0 backgroundMenu">
                 <div class="col-1"></div>
                 <div class="col-sm-6 col-md-5 col-lg-4">
-                    <div style={{ border: "2px solid grey", borderRadius: "5px", boxShadow: "3px 3px #888888", marginTop: "70px" }} align="center">
-                        <form>
+                    <div style={{backgroundColor: '#fff', border: "2px solid grey", borderRadius: "5px", boxShadow: "3px 3px #888888", marginTop: "70px" }} align="center">
+                        <form style={{backgroundColor: '#fff'}}>
                             <h4 align="center" class="mt-5 mb-4">Đăng nhập</h4>
                             <div class="mb-3 mt-3 col-10">
                                 <input type="text" class="form-control pb-3 pt-3" id="username" name="username" placeholder="Tên đăng nhập" onInvalid={e => e.target.setCustomValidity('Mời bạn nhập tên đăng nhập')} onInput={e => e.target.setCustomValidity('')} required />
@@ -21,15 +21,15 @@ const SignInPage = (props) => {
                             </div>
                             <NavLink to="/forgetpassword" class="text-decoration-none d-flex justify-content-end col-10" style={{ fontWeight: "600", color: "black" }}>Bạn quên mật khẩu?</NavLink>
 
-                            <NavLink to="/sign_up" class="btn d-flex justify-content-center col-10 mb-2 mt-2" style={{ color: "#0096FF" }}>Nếu bạn chưa có tài khoản, đăng ký ngay!</NavLink>
+                            <NavLink to="/sign_up" class="btn d-flex justify-content-center col-10 mb-2 mt-2" style={{ color: "#01D09E" }}>Nếu bạn chưa có tài khoản, đăng ký ngay!</NavLink>
 
-                            <button type="submit" class="btn col-10 pb-3 pt-3" style={{ backgroundColor: "#0096FF", color: "#FFFFFF", marginBottom: "300px" }}>Đăng nhập</button>
+                            <button type="submit" class="btn col-10 pb-3 pt-3" style={{ backgroundColor: "#01D09E", color: "#FFFFFF", marginBottom: "300px" }}>Đăng nhập</button>
                         </form>
                     </div>
                 </div>
-                <div class="col-sm-5 col-md-6 col-lg-7 d-none d-sm-block"><img alt="" src="/images/kham5.png" style={{ width: "90%" }} align="right" /></div>
+                <div class="col-sm-5 col-md-6 col-lg-7 d-none d-sm-block"><img alt="" src="/images/2.png" style={{ width: "90%" }} align="right" /></div>
             </section >
-            <section class="mt-5" style={{ backgroundColor: "#F0F6FB" }}>
+            <section class="mt-5" style={{ backgroundColor: "#8DE4CF" }}>
                 <div class="container">
                     <div class="row g-0">
                         <div class="col-md-6 pt-5 pb-5">

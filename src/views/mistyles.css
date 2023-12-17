@@ -38,14 +38,14 @@
 }
 
 .nav-link:focus {
-    background-color: #0096FF !important;
+    background-color: #01D09E !important;
     color: white !important;
     font-size: 16px !important;
     font-weight: bold;
 }
 
 .nav-link:hover {
-    background-color: #0096FF !important;
+    background-color: #01D09E !important;
     color: white !important;
     font-size: 16px !important;
     font-weight: bold;
@@ -63,7 +63,7 @@ iframe {
 }
 
 .person {
-    background-color: #0096FF;
+    background-color: #01D09E;
     width: 450px;
     height: 300px;
     flex-shrink: 0;
@@ -173,13 +173,13 @@ iframe {
 }
 
 .nav-link:focus {
-    background-color: #0096FF;
+    background-color: #01D09E;
     color: white;
     font-size: 14px;
 }
 
 .nav-link:hover {
-    background-color: #0096FF;
+    background-color: #01D09E;
     color: white;
     font-size: 14px;
 }
@@ -194,7 +194,7 @@ iframe {
     height: 1000px;
 }
 .bluecolor {
-    background-color: #0096FF; 
+    background-color: #01D09E; 
     border: white;
 }
 .bluecolor:hover {
@@ -211,7 +211,7 @@ iframe {
     
 }
 .editBtn {
-    background-color: #0096FF;
+    background-color: #01D09E;
     color: #FFF;
     border-radius: 3px;
 }
@@ -316,7 +316,7 @@ iframe {
   .btnSummit {
     margin-top: 1rem;
     border: none;
-    background-color: #0096FF;
+    background-color: #01D09E;
     color: #fff;
     padding: 0.5rem 1rem;
     border-radius: 10px;
@@ -346,3 +346,62 @@ iframe {
     top:16px;
     right: 16px;
   }
+
+  .slide img {
+     width: 20rem;
+     margin: 0 auto;
+  }
+  .slide {
+    transform: scale(0.2);
+    transform: translate 300ms;
+    opacity: 0.5;
+  }
+  .activeSlide {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  .arrow {
+    background-color: #fff;
+    position: absolute;
+    cursor: pointer;
+    z-index: 10;
+  }
+  .arrow svg {
+    transition: color 300ms;
+  }
+  .arrow svg:hover {
+    color: #01D09E;
+  }
+  .next {
+    right: 0%;
+    top: 50%;
+  }
+  .prev {
+    left: 0%;
+    top: 50%;
+  }
+  .reviewSlide{
+    padding: 30px;
+    border-radius: 10px;
+    background-color: #01D09E;
+    box-shadow: 5px 10px 8px #888888;
+    color: #fff;
+  }
+  .logoBorder {
+    background-color: #fff;
+    width: 50px;
+  }
+
+  .btn-primary {
+    background-color: #01D09E !important;
+    border: #01D09E !important;
+  }
+  .abc {
+
+  }
+th td table {
+  border: 1px solid saddlebrown ;
+}
+.backgroundMenu {
+  background-color: #01D09E !important;
+}

@@ -1,14 +1,24 @@
 import { NavLink } from "react-router-dom"
 const TopNav = () => {
     return (
+        <div >
+            <table>
+                <th>
+                    <img src='/images/banner.gif'/>
+                </th>
+                <th>
+                        <p className="" style={{ marginLeft: '30px', fontSize: "35px", color: "#01D09E" }}>Chào mừng đến với chúng tôi</p>
+                        <p style={{marginLeft: '30px'}}><h3>Với kinh nghiệm hơn 7 năm, chúng tôi sẽ đem đến cho bạn nhưng trải nghiệm tốt nhất</h3></p>
+                </th>
+            </table>
+       
         <nav className="navbar navbar-expand-sm bg-light navbar-light">
             <div className="container" id="topNav">
-                <div>
-                    <img src="/images/logo1.png" alt="Avatar Logo" style={{ width: "100%" }} />
-                </div>
+            
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#collapsibleNavbar">
-                    Menu
-                    <i class="fa-solid fa-caret-down"></i>
+                <div>
+                    <img src="/images/1.png" alt="Avatar Logo" style={{ width: "50px" }} />
+                </div>
                 </button>
 
                 <div className="mx-3"></div>
@@ -45,6 +55,7 @@ const TopNav = () => {
             </div>
 
         </nav >
+        </div>
     )
 }
 export default TopNav;

@@ -7,11 +7,11 @@ const SignUpPage = (props) => {
     return (
         <div>
             <TopNav />
-            <section class="row g-0">
+            <section class="row g-0 backgroundMenu">
                 <div class="col-1"></div>
                 <div class="col-sm-6 col-md-5 col-lg-4">
-                    <div style={{ border: "2px solid grey", borderRadius: "5px", boxShadow: "3px 3px #888888", marginTop: "70px" }} align="center">
-                        <form>
+                    <div style={{backgroundColor: '#fff', border: "2px solid grey", borderRadius: "5px", boxShadow: "3px 3px #888888", marginTop: "70px" }} align="center">
+                        <form style={{backgroundColor: '#fff'}}>
                             <h4 align="center" class="mt-5 mb-4">Đăng ký</h4>
                             <div class="mb-3 mt-3 col-10">
                                 <input type="text" class="form-control pb-3 pt-3" id="fullName" name="fullName" placeholder="Họ và tên" required />
@@ -44,15 +44,15 @@ const SignUpPage = (props) => {
                                 <input type="password" class="form-control pb-3 pt-3" id="re-enter_password" name="re-enter_password" placeholder="Nhập lại mật khẩu" required />
                             </div>
 
-                            <NavLink to="/sign_in" class="btn d-flex justify-content-center col-10 mb-2 mt-2" style={{ color: "#0096FF" }}>Đăng nhập nếu bạn đã có tài khoản</NavLink>
+                            <NavLink to="/sign_in" class="btn d-flex justify-content-center col-10 mb-2 mt-2" style={{ color: "#01D09E" }}>Đăng nhập nếu bạn đã có tài khoản</NavLink>
 
-                            <button type="submit" class="btn col-10 pb-3 pt-3 mb-5" style={{ backgroundColor: "#0096FF", color: "#FFFFFF" }}>Đăng ký</button>
+                            <button type="submit" class="btn col-10 pb-3 pt-3 mb-5" style={{ backgroundColor: "#01D09E", color: "#FFFFFF" }}>Đăng ký</button>
 
 
                         </form>
                     </div>
                 </div>
-                <div class="col-sm-5 col-md-6 col-lg-7 d-none d-sm-block"><img alt="" src="/images/kham5.png" style={{ width: "90%" }} align="right" /></div>
+                <div class="col-sm-5 col-md-6 col-lg-7 d-none d-sm-block"><img alt="" src="/images/2.png" style={{ width: "90%" }} align="right" /></div>
             </section >
             <section class="mt-5" style={{ backgroundColor: "#F0F6FB" }}>
                 <div class="container">
@@ -66,7 +66,7 @@ const SignUpPage = (props) => {
                         </div>
                         <div class="col-1"></div>
                         <div class="col-md-5">
-                            <img alt="" src="/images/kham4.png" style={{ width: "100%", marginBottom: "-5%", marginTop: "-5%" }} />
+                            <img alt="" src="/images/kham7.png" style={{ width: "100%", marginBottom: "-5%", marginTop: "-5%" }} />
                         </div>
                     </div>
                 </div>

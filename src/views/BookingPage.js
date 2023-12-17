@@ -3,14 +3,14 @@ import TopNav from '../components/TopNav'
 import Footer from '../components/Footer';
 const BookingPage = (props) => {
     return (
-        <div>
+        <div> 
             <TopNav />
-            <section class="row g-0">
-                <div class="col-1"></div>
-                <div class="col-sm-6 col-md-5 col-lg-4">
-                    <div style={{ border: "2px solid grey", borderRadius: "5px", boxShadow: "3px 3px #888888", marginTop: "70px" }} align="center">
-                        <form>
-                            < h4 align="center" class="mt-5 mb-4">Đặt lịch hẹn</h4>
+            <section class="row g-0" style={{backgroundColor: '#01D09E'}}>
+                <div class="col-1" ></div>
+                <div class="col-sm-6 col-md-5 col-lg-4" >
+                    <div style={{backgroundColor: '#fff', border: "2px solid grey", borderRadius: "5px", boxShadow: "3px 3px #888888", marginTop: "70px" }} align="center">
+                        <form style={{backgroundColor: '#fff'}}>
+                            < h4 align="center" class="mt-5 mb-4" >Đặt lịch hẹn</h4>
                             <div class="mb-3 mt-3 col-10">
                                 <select class="form-select pb-3 pt-3" aria-label="Chọn chi nhánh">
                                     <option selected value="0">Chi nhánh 1</option>
@@ -37,13 +37,13 @@ const BookingPage = (props) => {
                             <div class="mb-3 mt-3 col-10 send-area" style={{ borderRadius: "5px", borderColor: "#D9D9D9" }}>
                                 <textarea rows="4" placeholder="Lời nhắn"></textarea>
                             </div>
-                            <button type="submit" class="btn col-10 pb-3 pt-3 mb-5" style={{ backgroundColor: "#0096FF", color: "#FFFFFF" }}>Gửi lịch hẹn</button>
+                            <button type="submit" class="btn col-10 pb-3 pt-3 mb-5" style={{ backgroundColor: "#01D09E", color: "#FFFFFF" }}>Gửi lịch hẹn</button>
 
 
                         </form>
                     </div>
                 </div >
-                <div class="col-sm-5 col-md-6 col-lg-7 d-none d-sm-block"><img alt="" src="/images/kham5.png" style={{ width: "90%" }} align="right" /></div>
+                <div class="col-sm-5 col-md-6 col-lg-7 d-none d-sm-block"><img alt="" src="/images/2.png" style={{ width: "90%" }} align="right" /></div>
             </section >
             <section class="mt-5" style={{ backgroundColor: "#F0F6FB" }}>
                 <div class="container">

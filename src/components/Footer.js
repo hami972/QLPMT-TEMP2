@@ -1,11 +1,11 @@
 const Footer = (props) => {
     const { style } = props
     return (
-        <footer style={{ backgroundColor: "#0096FF", color: "white", marginTop: "80px", ...style }}>
+        <footer style={{ backgroundColor: "#01D09E", color: "white", marginTop: "80px", ...style }}>
             <div className="container pt-4 pb-5">
                 <div className="row">
                     <div className="col-md-3">
-                        <img alt="" src="/images/logo2.png" />
+                        <img alt="" src="/images/1.png" className="logoBorder" />
                         <p className="mt-3" style={{ fontSize: "20px" }}>Giới thiệu</p>
                         <p>Phòng khám ABC đã được thành lập hơn 7 năm. Với kinh nghiệm và đội ngũ nha sĩ chuyện nghiệp chúng tôi tự tin sẽ đem đến nhưng dịch vụ tốt nhất.</p>
                     </div>
