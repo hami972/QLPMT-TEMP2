@@ -4,66 +4,59 @@ import ReactPaginate from 'react-paginate';
 import TopNav from '../components/TopNav'
 import Footer from '../components/Footer';
 const DoctorsPage = (props) => {
-    //fake list doctor
+
     const pageToRef = useRef(null);
 
+    //fake list doctor
     const doctorList = [
         {
-            image: "/images/doctor1.jpg",//can add height but not recommend
-            fullName: "Nguyễn Văn A",
-            brach: "Quận 7, HCM",
+            image: "/images/doctor1.jpg",
+            fullName: "Nguyễn Gia Bảo",
+            branch: "Thủ Đức, thành phố Hồ Chí Minh",
+            speciality: "Chuyên khoa II Răng Hàm Mặt",
         },
         {
-            image: "/images/doctor1.jpg",
-            fullName: "Nguyễn Thị Bé",
-            brach: "Quận 8, HCM",
+            image: "/images/doctor2.jpg",
+            fullName: "Nguyễn Thanh Thư",
+            branch: "Thủ Đức, thành phố Hồ Chí Minh",
+            speciality: "Bác sĩ Răng Hàm Mặt",
         },
         {
-            image: "/images/doctor1.jpg",
-            fullName: "Nguyễn Văn A",
-            brach: "Quận 7, HCM",
+            image: "/images/doctor3.jpg",
+            fullName: "Phan Nguyễn Cao Trí",
+            branch: "Thủ Đức, thành phố Hồ Chí Minh",
+            speciality: "Thạc sĩ Răng Hàm Mặt",
         },
         {
-            image: "/images/doctor1.jpg",
-            fullName: "Nguyễn Thị Bé",
-            brach: "Quận 8, HCM",
+            image: "/images/doctor4.jpg",
+            fullName: "Lê Thị Lan Nhi",
+            branch: "Thủ Đức, thành phố Hồ Chí Minh",
+            speciality: "Chuyên khoa I Răng hàm mặt",
         },
         {
-            image: "/images/doctor1.jpg",
-            fullName: "Nguyễn Văn A",
-            brach: "Quận 7, HCM",
+            image: "/images/doctor10.jpg",
+            fullName: "Trần Gia Nghĩa",
+            branch: "Thủ Đức, thành phố Hồ Chí Minh",
+            speciality: "Chuyên khoa I Răng Hàm Mặt",
         },
         {
-            image: "/images/doctor1.jpg",
-            fullName: "Nguyễn Thị Bé",
-            brach: "Quận 8, HCM",
-        }
-        ,
-        {
-            image: "/images/doctor1.jpg",
-            fullName: "Nguyễn Thị Bé",
-            brach: "Quận 8, HCM",
+            image: "/images/doctor5.jpg",
+            fullName: "Hoàng Thị Thảo",
+            branch: "Quận 8, thành phố Hồ Chí Minh",
+            speciality: "Bác sĩ Răng Hàm Mặt",
         },
         {
-            image: "/images/doctor1.jpg",
-            fullName: "Nguyễn Văn A",
-            brach: "Quận 7, HCM",
+            image: "/images/doctor6.jpg",
+            fullName: "Trần Thị Hà",
+            branch: "Quận 7, thành phố Hồ Chí Minh",
+            speciality: "Bác sĩ Răng Hàm Mặt",
         },
         {
-            image: "/images/doctor1.jpg",
-            fullName: "Nguyễn Thị Bé",
-            brach: "Quận 8, HCM",
+            image: "/images/doctor7.jpg",
+            fullName: "Hoàng Thị Phương",
+            branch: "Quận 7, thành phố Hồ Chí Minh",
+            speciality: "Thạc sĩ Răng Hàm Mặt",
         },
-        {
-            image: "/images/doctor1.jpg",
-            fullName: "Nguyễn Thị Bé",
-            brach: "Quận 8, HCM",
-        },
-        {
-            image: "/images/doctor1.jpg",
-            fullName: "Nguyễn Thị Bé",
-            brach: "Quận 8, HCM",
-        }
     ]
     const doctorPerPage = 4;
     const [startOffset, setStartOffset] = useState(0);
@@ -72,9 +65,8 @@ const DoctorsPage = (props) => {
     const totalPages = Math.ceil(doctorList.length / doctorPerPage);
 
     const handlePageClick = (event) => {
-
         setStartOffset((event.selected * doctorPerPage) % doctorList.length)
-        pageToRef.current.scrollIntoView();;
+        pageToRef.current.scrollIntoView();
     }
 
     return (
@@ -93,16 +85,16 @@ const DoctorsPage = (props) => {
                 </div>
             </section>
 
-            <section class="container mt-5 mb-5">
-                <div class="row" ref={pageToRef}>
+            <section className="container mt-5 mb-5">
+                <div className="row" ref={pageToRef}>
                     {currentDoctorList.map((item, index) => {
                         return (
-                            <div class="col-sm-6 col-md-3 p-4">
+                            <div className="col-sm-6 col-md-3 p-4">
                                 <img src={item.image} alt="" style={{ width: "100%" }} />
-                                <p class="mt-3">
+                                <p className="mt-3">
                                     {item.fullName}<br />
-                                    Chuyên khoa:<br />
-                                    Chi nhánh:  {item.brach}
+                                    Bằng cấp: {item.speciality}<br />
+                                    Chi nhánh:  {item.branch}
                                 </p>
 
                             </div>
@@ -116,7 +108,6 @@ const DoctorsPage = (props) => {
                         marginPagesDisplayed={1} //1 left neighbor and 1 right neighbor
                         pageCount={totalPages}//totalPage
                         previousLabel="<"
-
                         pageClassName="page-item"
                         pageLinkClassName="page-link"
                         previousClassName="page-item"
@@ -127,7 +118,6 @@ const DoctorsPage = (props) => {
                         breakLinkClassName="page-link"
                         containerClassName="pagination justify-content-center"
                         activeClassName="active"
-
                     />
                 </div>
 

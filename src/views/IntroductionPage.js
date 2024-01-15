@@ -22,63 +22,155 @@ const IntroductionPage = (props) => {
     //fake review list
     const reviewList = [
         {
-            fullname: "Trần Thị C",
-            image: "/images/ava.png",
-            brach: "Chi nhánh quận 1",
-            review: "Đặt lịch rất dễ dàng, luôn tạo điều kiện tốt cho khách hàng"
+            fullname: "Trần Hoàng Thảo An ",
+            image: "/images/khach1.png",
+            branch: "Chi nhánh Thủ Đức",
+            review: "Có các bác sĩ nha khoa và nhân viên có kinh nghiệm, đào tạo tốt và nhiệt tình, tạo cảm giác an tâm cho bệnh nhân."
         },
         {
-            fullname: "Trần Văn Yến",
-            image: "/images/ava.png",
-            brach: "Chi nhánh quận 2",
-            review: "Đặt lịch rất dễ dàng, luôn tạo điều kiện tốt cho khách hàng"
+            fullname: "Trần Thị Yến",
+            image: "/images/khach5.png",
+            branch: "Chi nhánh quận 7",
+            review: "Không kéo dài thời gian chờ đợi cho bệnh nhân, tạo cảm giác tiện lợi và tôn trọng thời gian của chúng tôi."
         },
         {
-            fullname: "Trần Thị C",
-            image: "/images/ava.png",
-            brach: "Chi nhánh quận 1",
-            review: "Đặt lịch rất dễ dàng, luôn tạo điều kiện tốt cho khách hàng"
+            fullname: "Hoàng Văn Bình",
+            image: "/images/khach2.png",
+            branch: "Chi nhánh Thủ Đức",
+            review: "Cung cấp thông tin rõ ràng và tư vấn chăm sóc sau điều trị, giúp bệnh nhân hiểu rõ về tình trạng sức khỏe của mình."
         },
         {
-            fullname: "Trần Văn Yến",
-            image: "/images/ava.png",
-            brach: "Chi nhánh quận 2",
-            review: "Đặt lịch rất dễ dàng, luôn tạo điều kiện tốt cho khách hàng"
+            fullname: "Phan Hải Anh",
+            image: "/images/khach4.png",
+            branch: "Chi nhánh Thủ Đức",
+            review: "Nha khoa ở đây có bác sĩ rất tốt, họ giúp răng của mình trở nên khỏe mạnh và sáng bóng. Răng đẹp lên khiến cháu tự tin và vui lắm ạ"
         },
         {
-            fullname: "Trần Thị C",
-            image: "/images/ava.png",
-            brach: "Chi nhánh quận 1",
-            review: "Đặt lịch rất dễ dàng, luôn tạo điều kiện tốt cho khách hàng"
+            fullname: "Hoàng Lê Bảo Châu",
+            image: "/images/khach3.png",
+            branch: "Chi nhánh Thủ Đức",
+            review: "Bác sĩ và nhân viên tại nha khoa tốt thường rất tận tâm. Thời gian đặt lịch rất rõ ràng không cần chờ đợi."
         },
         {
-            fullname: "Trần Văn Y",
-            image: "/images/ava.png",
-            brach: "Chi nhánh quận 2",
-            review: "Đặt lịch rất dễ dàng, luôn tạo điều kiện tốt cho khách hàng"
-        },
-        {
-            fullname: "Trần Thị C",
-            image: "/images/ava.png",
-            brach: "Chi nhánh quận 1",
-            review: "Đặt lịch rất dễ dàng, luôn tạo điều kiện tốt cho khách hàng"
+            fullname: "Trần Vũ Thảo My",
+            image: "/images/khach6.png",
+            branch: "Chi nhánh quận 8",
+            review: "Đội ngũ y tá ở đây rất chu đáo và nhẹ nhàng, họ luôn tạo cảm giác an tâm và thoải mái cho bệnh nhân."
         }
         ,
         {
-            fullname: "Trần Thị C",
-            image: "/images/ava.png",
-            brach: "Chi nhánh quận 1",
-            review: "Đặt lịch rất dễ dàng, luôn tạo điều kiện tốt cho khách hàng"
+            fullname: "Trương Anh Trinh",
+            image: "/images/khach7.png",
+            branch: "Chi nhánh quận 7",
+            review: "Tôi thích việc được tư vấn về cách chăm sóc răng miệng và lựa chọn sản phẩm phù hợp cho nụ cười của mình."
         }
         ,
         {
-            fullname: "Trần Thị C",
-            image: "/images/ava.png",
-            brach: "Chi nhánh quận 1",
-            review: "Đặt lịch rất dễ dàng, luôn tạo điều kiện tốt cho khách hàng"
+            fullname: "Phạm Hải Lam",
+            image: "/images/khach8.png",
+            branch: "Chi nhánh Thủ Đức",
+            review: "Bác sĩ nữ ở nha khoa tốt thường rất tận tâm và chu đáo trong việc tư vấn về việc chăm sóc răng miệng sau điều trị."
+        }
+        ,
+        {
+            fullname: "Nguyễn Thị Bảo Thương",
+            image: "/images/khach9.png",
+            branch: "Chi nhánh Thủ Đức",
+            review: "Tôi thích điều trị ở nha khoa tốt vì họ sử dụng các trang thiết bị hiện đại và phương pháp làm đẹp răng hiệu quả."
         }
     ]
+    const serviceList = [
+        {
+            image: "/images/chinhhinh.png",
+            name: "Chỉnh hình răng",
+            price: "30.000.000-50.000.000 đồng",
+            description: "Niềng răng là quá trình điều chỉnh vị trí của răng để cải thiện hàm răng và ngoại hình. Bằng cách sử dụng các bộ niềng răng, các chuyên gia nha khoa có thể di chuyển răng từ vị trí ban đầu của chúng đến vị trí mong muốn, giúp cải thiện sự cân đối của khuôn mặt và tăng tính thẩm mỹ của nụ cười."
+        },
+        {
+            image: "/images/dieutrituy.png",
+            name: "Điều trị tủy",
+            price: "1.500.000-2.000.000 đồng",
+            description: "Điều trị tủy là quá trình y tế nhằm điều trị các vấn đề liên quan đến tủy răng khi tủy bị viêm, tổn thương hoặc nhiễm trùng. Quá trình này thường bao gồm việc loại bỏ tủy răng bị tổn thương, làm sạch và điều trị khuẩn tủy, sau đó điền kín khoang tủy để ngăn vi khuẩn xâm nhập và tái phát triển. Điều trị tủy không chỉ giữ cho răng được bảo tồn mà còn ngăn ngừa sự lan rộng của nhiễm trùng đến các cấu trúc xung quanh."
+        },
+        {
+            image: "/images/nhorang.png",
+            name: "Nhổ răng",
+            price: "300.000-1.500.000 đồng",
+            description: "Việc nhổ răng là quá trình y tế được thực hiện để loại bỏ răng đã bị tổn thương, bị nhiễm trùng hoặc không thể được điều trị. Quá trình này thường được thực hiện bởi các chuyên gia nha khoa hoặc các bác sĩ nha khoa có kỹ năng chuyên sâu. Việc nhổ răng được thực hiện sau khi xác định rằng răng không thể được cứu chữa hoặc không tốt cho sức khỏe nướu miệng và hàm răng. Đôi khi, việc nhổ răng cũng có thể là phần của quá trình điều trị nha khoa khác như chuẩn bị cho việc cấy ghép răng hoặc để tạo không gian cho các điều trị khác."
+        },
+        {
+            image: "/images/laycaorang.png",
+            name: "Cạo vôi răng",
+            price: "400.000 đồng",
+            description: "Cạo vôi răng là quá trình loại bỏ các cặn bám và mảng bám trên bề mặt của răng để làm sạch và ngăn ngừa sự hình thành của sâu răng và bệnh nướu. Thông qua việc sử dụng các dụng cụ chuyên dụng như cạo vôi và máy siêu âm, chuyên gia nha khoa sẽ loại bỏ các cặn bám, mảng bám và mảng vi khuẩn tích tụ trên răng và quanh nướu. Quá trình này giúp duy trì sức khỏe nướu miệng, ngăn ngừa sâu răng và các vấn đề liên quan đến vi khuẩn gây bệnh trong miệng."
+        },
+        {
+            image: "/images/phuchinh.png",
+            name: "Phục hình cố định",
+            price: "1.000.000-5.000.000 đồng",
+            description: "Phục hình cố định răng là quá trình khôi phục và cải thiện hàm răng bằng cách sử dụng các cấu trúc cố định như cầu răng, bọc răng, hay cấy ghép để thay thế răng bị mất, bị hỏng hoặc không còn khả năng sử dụng. Quá trình này thường được thực hiện bởi các chuyên gia nha khoa có kỹ năng chuyên sâu, nhằm tái tạo hàm răng hoàn chỉnh và cải thiện chức năng nhai cũng như thẩm mỹ nụ cười. "
+        },
+        {
+            image: "/images/ranggia.png",
+            name: "Răng giả tháo lắp",
+            price: "6.000.000 đồng",
+            description: "Răng giả tháo lắp là một loại phục hình không cố định, cho phép người dùng tháo lắp nó từ và lên trên nướu miệng một cách dễ dàng. Thường được làm từ chất liệu như nhựa hoặc kim loại nhẹ, răng giả tháo lắp có thể được đặt và tháo ra khỏi miệng hàng ngày để làm sạch, vệ sinh hoặc trong những trường hợp cần thiết khác. Điều này mang lại tính linh hoạt và thuận tiện cho người dùng so với các loại phục hình cố định khác, giúp duy trì sự thoải mái và sức khỏe tốt cho nướu miệng."
+        },
 
+    ]
+    const doctorList = [
+        {
+            image: "/images/doctor1.jpg",
+            fullName: "Nguyễn Gia Bảo",
+            branch: "Thủ Đức, thành phố Hồ Chí Minh",
+            speciality: "Chuyên khoa II Răng Hàm Mặt",
+            experience: "10 năm",
+            email: "baogia11@gmail.com",
+            phone: "043244332"
+        },
+        {
+            image: "/images/doctor2.jpg",
+            fullName: "Nguyễn Thanh Thư",
+            branch: "Thủ Đức, thành phố Hồ Chí Minh",
+            speciality: "Bác sĩ Răng Hàm Mặt",
+            experience: "1 năm",
+            email: "thanhthunguyen1999@gmail.com",
+            phone: "0949322478"
+        },
+        {
+            image: "/images/doctor7.jpg",
+            fullName: "Hoàng Thị Phương",
+            branch: "Quận 7, thành phố Hồ Chí Minh",
+            speciality: "Thạc sĩ Răng Hàm Mặt",
+            experience: "8 năm",
+            email: "phanvietthang718@gmail.com",
+            phone: "0989976555"
+        },
+        {
+            image: "/images/doctor4.jpg",
+            fullName: "Lê Thị Lan Nhi",
+            branch: "Thủ Đức, thành phố Hồ Chí Minh",
+            speciality: "Chuyên khoa I Răng hàm mặt",
+            experience: "3 năm",
+            email: "21522425@gm.uit.edu.vn",
+            phone: "0987869333"
+        },
+    ]
+    var settings = {
+        infinite: true,
+        swipeToSlide: true,
+        speed: 500,
+        slidesToShow: 1,//number show each slide
+        slidesToScroll: 1,//number item next 
+        responsive: [
+            {
+                breakpoint: 800,
+                settings: {
+                    arrows: false,
+                }
+            }
+        ]
+    };
 
     return (
         <div >
@@ -86,11 +178,11 @@ const IntroductionPage = (props) => {
             <TopNav />
             <section className="row g-0" style={{ backgroundColor: '#01D09E' }}>
 
-                <div className="col-md-6 d-none d-md-block"><img alt="" src="/images/2.png" style={{ width: "90%" }} align="right" /></div>
+                <div className="col-md-6 d-none d-md-block"><img alt="" src="/images/2.png" style={{ width: "90%" }} /></div>
 
-                <div className="col-md-5 mt-5 p-3">
+                <div className="col-md-5 mt-lg-5 p-3">
                     <p> </p>
-                    <p> <h1> Phòng khám Vui Vẻ của chúng tôi được thành lập từ 2015 </h1> </p>
+                    <p> <h1> Phòng khám Brilliance của chúng tôi được thành lập từ 2015 </h1> </p>
                     <p> <h3>Chúng tôi hứa hẹn sẽ đem đến trải nghiệm tốt nhất</h3> </p>
                     <p><h3>Đặt lịch ngay với chúng tôi</h3></p>
                     <div className="col-12">
@@ -121,158 +213,60 @@ const IntroductionPage = (props) => {
             <section className="mt-5 container">
                 <h3 align="center">Các dịch vụ</h3>
                 <div className="row">
-                    <div className="col-md-4 pe-5 px-5 pt-2 pb-4">
-                        <p>
-                            <h5>Làm trắng răng</h5>
-                            <span className="truncation-text">Tẩy trắng răng là phương pháp dùng các hợp chất kết hợp với năng lượng ánh sáng sẽ tạo ra phản ứng oxy hóa cắt đứt các chuỗi phân tử màu các chuỗi phân tử màu trong ngà răng. Từ đó giúp răng trắng sáng hơn so với màu răng ban đầu mà không làm tổn hại bề mặt răng hay bất kỳ yếu tố nào trong răng.</span>
-                        </p>
-                        <NavLink to="/services" className="text-decoration-none" style={{ color: "#01D09E" }}>Xem thêm &rarr;</NavLink>
-                    </div>
-                    <div className="col-md-4 pe-5 px-5 pt-2 pb-4">
-                        <p>
-                            <h5>Vệ snh răng miệng</h5>
-                            <span className="truncation-text">Vệ sinh răng miệng là quá trình loại bỏ cao răng hoặc mảng bám cứng trên bề mặt răng và dưới nướu. Cao răng được hình thành từ vi khuẩn ăn các mảnh....</span>
-                        </p>
-                        <NavLink to="/services" className="text-decoration-none" style={{ color: "#01D09E" }}>Xem thêm &rarr;</NavLink>
-                    </div>
-                    <div className="col-md-4 pe-5 px-5 pt-2 pb-4">
-                        <p>
-                            <h5>Nhổ răng khôn</h5>
-                            <span className="truncation-text">Nhổ răng khôn là kỹ thuật tương đối phức tạp đòi hỏi bác sĩ thực hiện phải có kỹ thuật và nhiều kinh nghiệm.</span>
-
-                        </p>
-                        <NavLink to="/services" className="text-decoration-none" style={{ color: "#01D09E" }}>Xem thêm &rarr;</NavLink>
-
-                    </div>
-                    <div className="col-md-4 pe-5 px-5 pt-2 pb-4">
-                        <p>
-                            <h5>Niềng răng thẩm mỹ</h5>
-                            <span className="truncation-text">Niềng răng là phương pháp sử dụng khí cụ chuyên dụng được gắn cố định hoặc tháo lắp trên răng để giúp dịch chuyển và sắp xếp răng về đúng vị trí....</span>
-                        </p>
-                        <NavLink to="/services" className="text-decoration-none" style={{ color: "#01D09E" }}>Xem thêm &rarr;</NavLink>
-                    </div>
-                    <div class="col-md-4 pe-5 px-5 pt-2 pb-4">
-                        <p>
-                            <h5>Cấy ghép implant</h5>
-                            <span className="truncation-text">Cấy ghép Implant là giải pháp phục hồi răng bị mất hiệu quả nhất bởi không chỉ giúp khôi phục thẩm mỹ hàm răng, đảm bảo khả năng ăn nhai bình thường, ....</span>
-                        </p>
-                        <NavLink to="/services" className="text-decoration-none" style={{ color: "#01D09E" }}>Xem thêm &rarr;</NavLink>
-                    </div>
-                    <div className="col-md-4 pe-5 px-5 pt-2 pb-4">
-                        <p>
-                            <h5 >Điều trị tủy</h5>
-                            <span className="truncation-text">Trong cấu trúc răng, tủy răng đóng vai trò rất quan trọng là cung cấp dinh dưỡng nuôi sống và giúp răng luôn vững chắc, và khi tủy răng bị viêm....</span>
-                        </p>
-                        <NavLink to="/services" className="text-decoration-none" style={{ color: "#01D09E" }}>Xem thêm &rarr;</NavLink>
-                    </div>
+                    {serviceList.map((item, index) => {
+                        return (
+                            <div className="col-md-4 pe-5 px-5 pt-2 pb-4">
+                                <p>
+                                    <h5>{item.name}</h5>
+                                    <span className="truncation-text">{item.description}</span>
+                                </p>
+                                <NavLink to="/services" className="text-decoration-none" style={{ color: "#01D09E" }}>Xem thêm &rarr;</NavLink>
+                            </div>
+                        )
+                    })}
                 </div>
                 <h5 className="mt-2" align="center"><NavLink to="/services" className="text-decoration-none customLink" style={{ color: "#000" }}>Xem thêm &rarr;</NavLink></h5>
             </section>
             <section class="container mt-5 mb-5">
                 <h4 align="center">Đội ngũ các chuyên gia nha sĩ</h4>
-                <Slider
-                    navigation={true}
-                    effect={"coverflow"}
-                    centeredSlides={true}
-                    slidesPerView={window.innerWidth < 768 ? 1 : "auto"}
-                    loop={true}
-                    coverflowEffect={{
-                        rotate: 50,
-                        stretch: 0,
-                        depth: 100,
-                        modifier: 1,
+                <div class="container-fluid mt-4">
+                    <Slider {...settings}>
+                        {doctorList.map((item, index) => {
+                            return (
+                                <div className="container mb-2" align="center">
+                                    <div className="row col-lg-6 col-md-9">
+                                        <div className='col-md-5 col-8 m-auto' align="right">
+                                            <img alt="" src={item.image} style={{ width: "100%" }} />
+                                        </div>
+                                        <div className='col-md-7 m-auto text-md-start'>
+                                            <div className='mt-2'>
+                                                <span style={{ fontWeight: "600" }}>Họ và tên: </span> {item.fullName}
+                                            </div>
+                                            <div className='mt-2'>
+                                                <span style={{ fontWeight: "600" }}>Bằng cấp: </span> {item.speciality}
+                                            </div>
+                                            <div className='mt-2'>
+                                                <span style={{ fontWeight: "600" }}>Kinh nghiệm: </span> {item.experience}
+                                            </div>
+                                            <div className='mt-2'>
+                                                <span style={{ fontWeight: "600" }}>Chi nhánh: </span> {item.branch}
+                                            </div>
+                                            <div className='mt-2'>
+                                                <span style={{ fontWeight: "600" }}>Số điện thoại: </span> {item.phone}
+                                            </div>
+                                            <div className='mt-2 mb-2'>
+                                                <span style={{ fontWeight: "600" }}>Email: </span> {item.email}
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            )
+                        })}
+                    </Slider>
 
-                        slideShadows: true
-                    }}
-                    pagination={{
-                        clickable: true
-                    }}
-                    className="mySwiper"
-                >
-                    <SplideSlide>
-                        <table className='table table-striped'>
-                            <tr>
-                                <td style={{ width: "20%" }}>
-                                </td>
-                                <td style={{ width: "20%" }}>
-                                    <img style={{ width: "100%" }} src="/images/doctor2.jpg" />
-                                </td>
-                                <td style={{ width: "40%", align: 'l' }}>
-                                    <p> Họ và tên: Dr. Nguyễn Văn A <br />
-                                        Chuyên ngành: Nha khoa, orthodontics, implantology, etc.<br />
-                                        Học vị: Tiến sĩ nha khoa.<br />
-                                        Kinh nghiệm: 7 năm hoạt động trong lĩnh vực nha khoa.<br />
-                                        Địa chỉ phòng khám: Quận 8, Thành phố HCM<br />
-                                        Số điện thoại: 000000000000.<br />
-                                        Email: nguyenvana@gmail.com </p>
-                                </td>
-                            </tr>
-                        </table>
-                    </SplideSlide>
-                    <SplideSlide>
-                        <table className='table table-striped'>
-                            <tr>
-                                <td style={{ width: "20%" }}>
-                                </td>
-                                <td style={{ width: "20%" }}>
-                                    <img style={{ width: "100%" }} src="/images/doctor1.jpg" />
-                                </td>
-                                <td style={{ width: "40%", align: 'l' }}>
-                                    <p> Họ và tên: Dr. Nguyễn Văn A <br />
-                                        Chuyên ngành: Nha khoa, orthodontics, implantology, etc.<br />
-                                        Học vị: Tiến sĩ nha khoa.<br />
-                                        Kinh nghiệm: 7 năm hoạt động trong lĩnh vực nha khoa.<br />
-                                        Địa chỉ phòng khám: Quận 8, Thành phố HCM<br />
-                                        Số điện thoại: 000000000000.<br />
-                                        Email: nguyenvana@gmail.com </p>
-                                </td>
-                            </tr>
-                        </table>
-                    </SplideSlide>
-                    <SplideSlide>
-                        <table className='table table-striped'>
-                            <tr>
-                                <td style={{ width: "20%" }}>
-                                </td>
-                                <td style={{ width: "20%" }}>
-                                    <img style={{ width: "100%" }} src="/images/doctor1.jpg" />
-                                </td>
-                                <td style={{ width: "40%", align: 'l' }}>
-                                    <p> Họ và tên: Dr. Nguyễn Văn A <br />
-                                        Chuyên ngành: Nha khoa, orthodontics, implantology, etc.<br />
-                                        Học vị: Tiến sĩ nha khoa.<br />
-                                        Kinh nghiệm: 7 năm hoạt động trong lĩnh vực nha khoa.<br />
-                                        Địa chỉ phòng khám: Quận 8, Thành phố HCM<br />
-                                        Số điện thoại: 000000000000.<br />
-                                        Email: nguyenvana@gmail.com </p>
-                                </td>
-                            </tr>
-                        </table>
-                    </SplideSlide>
-                    <SplideSlide>
-                        <table className='table table-striped'>
-                            <tr>
-                                <td style={{ width: "20%" }}>
-                                </td>
-                                <td style={{ width: "20%" }}>
-                                    <img style={{ width: "100%" }} src="/images/doctor4.jpg" />
-                                </td>
-                                <td style={{ width: "40%", align: 'l' }}>
-                                    <p> Họ và tên: Dr. Nguyễn Văn A <br />
-                                        Chuyên ngành: Nha khoa, orthodontics, implantology, etc.<br />
-                                        Học vị: Tiến sĩ nha khoa.<br />
-                                        Kinh nghiệm: 7 năm hoạt động trong lĩnh vực nha khoa.<br />
-                                        Địa chỉ phòng khám: Quận 8, Thành phố HCM<br />
-                                        Số điện thoại: 000000000000.<br />
-                                        Email: nguyenvana@gmail.com </p>
-                                </td>
-                            </tr>
-                        </table>
-                    </SplideSlide>
-
-                </Slider>
+                </div>
                 <h5 className="mt-2" align="center"><NavLink to="/doctors" className="text-decoration-none customLink" style={{ color: "#000" }}>Xem thêm &rarr;</NavLink></h5>
-            </section>
+            </section >
             <section className='container'>
                 <h3 align="center">Phản hồi của khách hàng</h3>
                 <p className='text-center'>Cảm ơn bạn đã tin tưởng chúng tôi</p>
@@ -284,7 +278,17 @@ const IntroductionPage = (props) => {
                             drag: "free",
                             arrows: false,
                             pagination: false,
-                            perPage: 3,
+                            perPage: 4,
+                            breakpoints: {
+                                1024: {
+                                    perPage: 3,
+
+                                },
+                                768: {
+                                    perPage: 2,
+
+                                },
+                            },
                             autoScroll: {
                                 pauseOnHover: false,
                                 pauseOnFocus: false,
@@ -297,8 +301,8 @@ const IntroductionPage = (props) => {
                         {reviewList.map((row, idx) => {
                             return (
                                 <SplideSlide>
-                                    <div className='col-sm-12 reviewSlide'>
-                                        <h1>{row.fullname}</h1>
+                                    <div className='reviewSlide' style={{ height: "100%" }}>
+                                        <h3>{row.fullname}</h3>
                                         <p>{row.review}</p>
                                     </div>
                                 </SplideSlide>
@@ -306,7 +310,6 @@ const IntroductionPage = (props) => {
                         })}
                     </Splide>
                 </div>
-
             </section >
             <Footer style={{ marginTop: "80px" }} />
         </div >
